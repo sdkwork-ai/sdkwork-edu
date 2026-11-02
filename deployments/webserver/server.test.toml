@@ -1,0 +1,13 @@
+environment = "test"
+
+[http]
+
+[[http.server]]
+listen = ["80"]
+serverName = ["edu-test.sdkwork.com", "edu-test.birdcoder.com", "edu-test.dtupay.com", "edu-test.noaper.com", "edu-test.sdkwork.cn", "edu-test.birdcoder.cn", "edu-test.dtupay.cn", "edu-test.noaper.cn", "edu-test.skubc.com", "edu-test.skubc.cn", "edu-test.zowalk.com", "edu-test.zowalk.cn", "edu-test.offer86.com", "edu-test.offer86.cn", "edu-test.86offer.com", "edu-test.86offer.cn"]
+include = ["snippets/adaptive-web.named-locations.conf", "snippets/gateway-api-locations.nonproduction.conf"]
+
+[[http.server.location]]
+match = "/"
+include = ["snippets/adaptive-web.dispatch.conf"]
+

@@ -1,0 +1,15 @@
+[package]
+name = "sdkwork-content-edu-repository-sqlx"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "SDKWork Edu sqlx repository implementations of the application service ports"
+
+[lib]
+name = "sdkwork_content_edu_repository_sqlx"
+
+[lints]
+workspace = true
+
+[dependencies]

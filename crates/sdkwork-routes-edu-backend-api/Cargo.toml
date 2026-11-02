@@ -1,0 +1,15 @@
+[package]
+name = "sdkwork-routes-edu-backend-api"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "SDKWork Edu backend-api route crate (education administration surfaces)"
+
+[lib]
+name = "sdkwork_routes_edu_backend_api"
+
+[lints]
+workspace = true
+
+[dependencies]

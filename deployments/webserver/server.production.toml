@@ -1,0 +1,196 @@
+environment = "production"
+
+[http]
+
+[[http.server]]
+listen = ["443 ssl", "80"]
+serverName = ["edu.sdkwork.com"]
+include = ["snippets/adaptive-web.named-locations.conf", "snippets/gateway-api-locations.production.conf"]
+
+[http.server.tls]
+cert = "sdkwork.com"
+
+[[http.server.location]]
+match = "/"
+include = ["snippets/adaptive-web.dispatch.conf"]
+
+[[http.server]]
+listen = ["443 ssl", "80"]
+serverName = ["edu.birdcoder.com"]
+include = ["snippets/adaptive-web.named-locations.conf", "snippets/gateway-api-locations.production.conf"]
+
+[http.server.tls]
+cert = "birdcoder.com"
+
+[[http.server.location]]
+match = "/"
+include = ["snippets/adaptive-web.dispatch.conf"]
+
+[[http.server]]
+listen = ["443 ssl", "80"]
+serverName = ["edu.dtupay.com"]
+include = ["snippets/adaptive-web.named-locations.conf", "snippets/gateway-api-locations.production.conf"]
+
+[http.server.tls]
+cert = "dtupay.com"
+
+[[http.server.location]]
+match = "/"
+include = ["snippets/adaptive-web.dispatch.conf"]
+
+[[http.server]]
+listen = ["443 ssl", "80"]
+serverName = ["edu.noaper.com"]
+include = ["snippets/adaptive-web.named-locations.conf", "snippets/gateway-api-locations.production.conf"]
+
+[http.server.tls]
+cert = "noaper.com"
+
+[[http.server.location]]
+match = "/"
+include = ["snippets/adaptive-web.dispatch.conf"]
+
+[[http.server]]
+listen = ["443 ssl", "80"]
+serverName = ["edu.sdkwork.cn"]
+include = ["snippets/adaptive-web.named-locations.conf", "snippets/gateway-api-locations.production.conf"]
+
+[http.server.tls]
+cert = "sdkwork.cn"
+
+[[http.server.location]]
+match = "/"
+include = ["snippets/adaptive-web.dispatch.conf"]
+
+[[http.server]]
+listen = ["443 ssl", "80"]
+serverName = ["edu.birdcoder.cn"]
+include = ["snippets/adaptive-web.named-locations.conf", "snippets/gateway-api-locations.production.conf"]
+
+[http.server.tls]
+cert = "birdcoder.cn"
+
+[[http.server.location]]
+match = "/"
+include = ["snippets/adaptive-web.dispatch.conf"]
+
+[[http.server]]
+listen = ["443 ssl", "80"]
+serverName = ["edu.dtupay.cn"]
+include = ["snippets/adaptive-web.named-locations.conf", "snippets/gateway-api-locations.production.conf"]
+
+[http.server.tls]
+cert = "dtupay.cn"
+
+[[http.server.location]]
+match = "/"
+include = ["snippets/adaptive-web.dispatch.conf"]
+
+[[http.server]]
+listen = ["443 ssl", "80"]
+serverName = ["edu.noaper.cn"]
+include = ["snippets/adaptive-web.named-locations.conf", "snippets/gateway-api-locations.production.conf"]
+
+[http.server.tls]
+cert = "noaper.cn"
+
+[[http.server.location]]
+match = "/"
+include = ["snippets/adaptive-web.dispatch.conf"]
+
+[[http.server]]
+listen = ["443 ssl", "80"]
+serverName = ["edu.skubc.com"]
+include = ["snippets/adaptive-web.named-locations.conf", "snippets/gateway-api-locations.production.conf"]
+
+[http.server.tls]
+cert = "skubc.com"
+
+[[http.server.location]]
+match = "/"
+include = ["snippets/adaptive-web.dispatch.conf"]
+
+[[http.server]]
+listen = ["443 ssl", "80"]
+serverName = ["edu.skubc.cn"]
+include = ["snippets/adaptive-web.named-locations.conf", "snippets/gateway-api-locations.production.conf"]
+
+[http.server.tls]
+cert = "skubc.cn"
+
+[[http.server.location]]
+match = "/"
+include = ["snippets/adaptive-web.dispatch.conf"]
+
+[[http.server]]
+listen = ["443 ssl", "80"]
+serverName = ["edu.zowalk.com"]
+include = ["snippets/adaptive-web.named-locations.conf", "snippets/gateway-api-locations.production.conf"]
+
+[http.server.tls]
+cert = "zowalk.com"
+
+[[http.server.location]]
+match = "/"
+include = ["snippets/adaptive-web.dispatch.conf"]
+
+[[http.server]]
+listen = ["443 ssl", "80"]
+serverName = ["edu.zowalk.cn"]
+include = ["snippets/adaptive-web.named-locations.conf", "snippets/gateway-api-locations.production.conf"]
+
+[http.server.tls]
+cert = "zowalk.cn"
+
+[[http.server.location]]
+match = "/"
+include = ["snippets/adaptive-web.dispatch.conf"]
+
+[[http.server]]
+listen = ["443 ssl", "80"]
+serverName = ["edu.offer86.com"]
+include = ["snippets/adaptive-web.named-locations.conf", "snippets/gateway-api-locations.production.conf"]
+
+[http.server.tls]
+cert = "offer86.com"
+
+[[http.server.location]]
+match = "/"
+include = ["snippets/adaptive-web.dispatch.conf"]
+
+[[http.server]]
+listen = ["443 ssl", "80"]
+serverName = ["edu.offer86.cn"]
+include = ["snippets/adaptive-web.named-locations.conf", "snippets/gateway-api-locations.production.conf"]
+
+[http.server.tls]
+cert = "offer86.cn"
+
+[[http.server.location]]
+match = "/"
+include = ["snippets/adaptive-web.dispatch.conf"]
+
+[[http.server]]
+listen = ["443 ssl", "80"]
+serverName = ["edu.86offer.com"]
+include = ["snippets/adaptive-web.named-locations.conf", "snippets/gateway-api-locations.production.conf"]
+
+[http.server.tls]
+cert = "86offer.com"
+
+[[http.server.location]]
+match = "/"
+include = ["snippets/adaptive-web.dispatch.conf"]
+
+[[http.server]]
+listen = ["443 ssl", "80"]
+serverName = ["edu.86offer.cn"]
+include = ["snippets/adaptive-web.named-locations.conf", "snippets/gateway-api-locations.production.conf"]
+
+[http.server.tls]
+cert = "86offer.cn"
+
+[[http.server.location]]
+match = "/"
+include = ["snippets/adaptive-web.dispatch.conf"]
+

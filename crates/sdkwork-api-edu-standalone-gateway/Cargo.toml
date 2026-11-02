@@ -1,0 +1,13 @@
+[package]
+name = "sdkwork-api-edu-standalone-gateway"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "SDKWork Edu single HTTP ingress gateway binary"
+
+[lints]
+workspace = true
+
+[dependencies]
+sdkwork-api-edu-assembly = { workspace = true }

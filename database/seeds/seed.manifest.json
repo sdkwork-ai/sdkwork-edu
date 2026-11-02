@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.database.seed",
+  "defaultLocale": "zh-CN",
+  "supportedLocales": [
+    "zh-CN",
+    "en-US",
+    "ja-JP",
+    "de-DE",
+    "fr-FR",
+    "ru-RU",
+    "ko-KR"
+  ],
+  "activeLocales": [
+    "zh-CN",
+    "en-US"
+  ],
+  "profiles": {
+    "minimal": {
+      "common": [],
+      "locales": {
+        "zh-CN": []
+      }
+    },
+    "standard": {
+      "common": [
+        "common/001_bootstrap.sql"
+      ],
+      "locales": {
+        "zh-CN": [],
+        "en-US": []
+      }
+    }
+  },
+  "i18nVersion": "1.0.0",
+  "fallbackLocale": "zh-CN",
+  "localeSets": {
+    "zh-CN": { "version": "1.0.0", "required": true, "checksum": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "files": [] },
+    "en-US": { "version": "1.0.0", "required": true, "checksum": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "files": [] },
+    "ja-JP": { "version": "1.0.0", "required": false, "checksum": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "files": [] },
+    "de-DE": { "version": "1.0.0", "required": false, "checksum": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "files": [] },
+    "fr-FR": { "version": "1.0.0", "required": false, "checksum": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "files": [] },
+    "ru-RU": { "version": "1.0.0", "required": false, "checksum": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "files": [] },
+    "ko-KR": { "version": "1.0.0", "required": false, "checksum": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "files": [] }
+  }
+}

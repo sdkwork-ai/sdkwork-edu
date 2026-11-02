@@ -1,0 +1,15 @@
+[package]
+name = "sdkwork-routes-edu-app-api"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "SDKWork Edu app-api route crate (learner, guardian and teacher surfaces)"
+
+[lib]
+name = "sdkwork_routes_edu_app_api"
+
+[lints]
+workspace = true
+
+[dependencies]

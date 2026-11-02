@@ -1,0 +1,53 @@
+{
+    "name":  "@sdkwork/edu-workspace",
+    "private":  true,
+    "version":  "0.1.0",
+    "type":  "module",
+    "license":  "AGPL-3.0-or-later",
+    "packageManager":  "pnpm@10.33.0",
+    "engines":  {
+                    "node":  "\u003e=22.0.0",
+                    "pnpm":  "\u003e=10.0.0"
+                },
+    "scripts":  {
+                    "dev":  "pnpm dev:standalone",
+                    "dev:standalone":  "pnpm exec sdkwork-app dev --deployment-profile standalone",
+                    "dev:cloud":  "pnpm exec sdkwork-app dev --deployment-profile cloud",
+                    "stop":  "pnpm exec sdkwork-app stop",
+                    "build":  "pnpm exec sdkwork-app build",
+                    "test":  "pnpm exec sdkwork-app test",
+                    "check":  "pnpm exec sdkwork-app check",
+                    "verify":  "pnpm exec sdkwork-app verify",
+                    "clean":  "pnpm exec sdkwork-app clean",
+                    "_sdkwork:build":  "cargo build --workspace --release",
+                    "_sdkwork:test":  "cargo test --workspace",
+                    "_sdkwork:check":  "pnpm run check:app-composition \u0026\u0026 pnpm run check:cors-standard \u0026\u0026 pnpm run test:contract:upload \u0026\u0026 pnpm run topology:validate \u0026\u0026 pnpm run db:validate",
+                    "_sdkwork:verify":  "pnpm run typecheck \u0026\u0026 pnpm run _sdkwork:test \u0026\u0026 pnpm run _sdkwork:check",
+                    "_sdkwork:clean":  "cargo clean",
+                    "typecheck":  "tsc --noEmit",
+                    "db:validate":  "node ../sdkwork-specs/tools/check-database-framework-standard.mjs --root .",
+                    "db:plan":  "cargo run --manifest-path ../sdkwork-database/Cargo.toml -p sdkwork-database-cli -- --app-root . plan",
+                    "db:init":  "cargo run --manifest-path ../sdkwork-database/Cargo.toml -p sdkwork-database-cli -- --app-root . init",
+                    "db:migrate":  "cargo run --manifest-path ../sdkwork-database/Cargo.toml -p sdkwork-database-cli -- --app-root . migrate",
+                    "db:seed":  "cargo run --manifest-path ../sdkwork-database/Cargo.toml -p sdkwork-database-cli -- --app-root . seed",
+                    "db:status":  "cargo run --manifest-path ../sdkwork-database/Cargo.toml -p sdkwork-database-cli -- --app-root . status",
+                    "db:drift":  "cargo run --manifest-path ../sdkwork-database/Cargo.toml -p sdkwork-database-cli -- --app-root . drift",
+                    "db:drift:check":  "cargo run --manifest-path ../sdkwork-database/Cargo.toml -p sdkwork-database-cli -- --app-root . drift-check",
+                    "db:bootstrap":  "cargo run --manifest-path ../sdkwork-database/Cargo.toml -p sdkwork-database-cli -- --app-root . bootstrap",
+                    "api:assembly:materialize":  "node ../sdkwork-specs/tools/materialize-api-assembly.mjs --root .",
+                    "api:assembly:validate":  "node ../sdkwork-specs/tools/validate-api-assembly.mjs --root .",
+                    "check:app-composition":  "node ../sdkwork-specs/tools/verify-repo.mjs --root .",
+                    "check:cors-standard":  "node ../sdkwork-specs/tools/check-cors-standard.mjs --root .",
+                    "check:api-envelope":  "node ../sdkwork-specs/tools/check-api-response-envelope.mjs --workspace .",
+                    "check:upload-declaration":  "node ../sdkwork-specs/tools/check-upload-declaration-standard.mjs --workspace .",
+                    "check:workspace-scripts":  "node ../sdkwork-specs/tools/check-pnpm-script-standard.mjs --root .",
+                    "topology:validate":  "node ../sdkwork-app-topology/scripts/sdkwork-topology.mjs validate --root . --spec specs/topology.spec.json",
+                    "db:materialize:contract":  "node ../sdkwork-specs/tools/materialize-database-contract-from-baseline.mjs --root . --baseline database/ddl/baseline/postgres/0001_edu_baseline.sql --module-id edu --owner edu-platform --prefixes edu_ --engines postgres",
+                    "test:contract:upload":  "node --test tests/contract/edu-upload-declaration.contract.test.mjs"
+                },
+    "devDependencies":  {
+                            "@sdkwork/app-topology":  "workspace:*",
+                            "@types/node":  "^25.9.2",
+                            "typescript":  "^6.0.2"
+                        }
+}

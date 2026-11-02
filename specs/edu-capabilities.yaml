@@ -1,0 +1,67 @@
+schemaVersion: 1
+kind: sdkwork.edu.capabilities
+applicationCode: edu
+appId: sdkwork-edu
+domain: content
+capability: edu
+apiSurfaces:
+  app:
+    prefix: /app/v3/api
+    authority: sdkwork-edu-app-api
+    audience: learner, guardian, teacher
+  backend:
+    prefix: /backend/v3/api
+    authority: sdkwork-edu-backend-api
+    audience: education administrator
+capabilities:
+  - id: term
+    tables: [edu_term]
+    permissions: [edu.terms.read, edu.terms.write]
+    uploads: []
+  - id: class
+    tables: [edu_class, edu_class_member]
+    permissions: [edu.classes.read, edu.classes.write, edu.classes.archive]
+    uploads: [edu.cover]
+  - id: student
+    tables: [edu_student]
+    permissions: [edu.students.read, edu.students.write, edu.students.export]
+    uploads: [edu.avatar]
+  - id: teacher
+    tables: [edu_teacher]
+    permissions: [edu.teachers.read, edu.teachers.write]
+    uploads: [edu.avatar]
+  - id: enrollment
+    tables: [edu_enrollment]
+    permissions: [edu.enrollments.read, edu.enrollments.write, edu.enrollments.review]
+    uploads: []
+  - id: schedule
+    tables: [edu_schedule]
+    permissions: [edu.schedules.read, edu.schedules.write]
+    uploads: []
+  - id: attendance
+    tables: [edu_attendance, edu_leave_request]
+    permissions: [edu.attendance.read, edu.attendance.write, edu.attendance.review]
+    uploads: [edu.evidence]
+  - id: assessment
+    tables: [edu_assessment, edu_score]
+    permissions: [edu.assessments.read, edu.assessments.write, edu.scores.read, edu.scores.publish]
+    uploads: []
+  - id: assignment
+    tables: [edu_assignment, edu_submission]
+    permissions: [edu.assignments.read, edu.assignments.write, edu.submissions.review]
+    uploads: [edu.submission]
+  - id: material
+    tables: [edu_material]
+    permissions: [edu.materials.read, edu.materials.write]
+    uploads: [edu.material]
+boundaries:
+  owns:
+    - academic terms, classes and class membership
+    - student and teacher profiles scoped to the tenant
+    - enrollment, scheduling, attendance and leave
+    - assessments, scores, assignments and submissions
+  delegates:
+    - identity, tenant and organization: sdkwork-iam
+    - file bytes, upload sessions and download grants: sdkwork-drive
+    - payments and refunds: commerce domain
+    - notifications and messaging: communication domain

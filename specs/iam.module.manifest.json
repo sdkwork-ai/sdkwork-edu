@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.iam.module",
+  "moduleId": "edu",
+  "domain": "edu",
+  "displayName": "SDKWork Edu",
+  "permissions": {
+    "catalog": [
+      { "code": "edu.classes.read", "description": "Permission edu.classes.read", "source": "openapi" },
+      { "code": "edu.classes.write", "description": "Permission edu.classes.write", "source": "openapi" },
+      { "code": "edu.classes.archive", "description": "Permission edu.classes.archive", "source": "openapi" },
+      { "code": "edu.students.read", "description": "Permission edu.students.read", "source": "openapi" },
+      { "code": "edu.students.write", "description": "Permission edu.students.write", "source": "openapi" },
+      { "code": "edu.students.export", "description": "Permission edu.students.export", "source": "openapi" },
+      { "code": "edu.teachers.read", "description": "Permission edu.teachers.read", "source": "openapi" },
+      { "code": "edu.teachers.write", "description": "Permission edu.teachers.write", "source": "openapi" },
+      { "code": "edu.guardians.read", "description": "Permission edu.guardians.read", "source": "openapi" },
+      { "code": "edu.guardians.write", "description": "Permission edu.guardians.write", "source": "openapi" },
+      { "code": "edu.terms.read", "description": "Permission edu.terms.read", "source": "openapi" },
+      { "code": "edu.terms.write", "description": "Permission edu.terms.write", "source": "openapi" },
+      { "code": "edu.enrollments.read", "description": "Permission edu.enrollments.read", "source": "openapi" },
+      { "code": "edu.enrollments.write", "description": "Permission edu.enrollments.write", "source": "openapi" },
+      { "code": "edu.enrollments.review", "description": "Permission edu.enrollments.review", "source": "openapi" },
+      { "code": "edu.schedules.read", "description": "Permission edu.schedules.read", "source": "openapi" },
+      { "code": "edu.schedules.write", "description": "Permission edu.schedules.write", "source": "openapi" },
+      { "code": "edu.attendance.read", "description": "Permission edu.attendance.read", "source": "openapi" },
+      { "code": "edu.attendance.write", "description": "Permission edu.attendance.write", "source": "openapi" },
+      { "code": "edu.attendance.review", "description": "Permission edu.attendance.review", "source": "openapi" },
+      { "code": "edu.assessments.read", "description": "Permission edu.assessments.read", "source": "openapi" },
+      { "code": "edu.assessments.write", "description": "Permission edu.assessments.write", "source": "openapi" },
+      { "code": "edu.assessments.publish", "description": "Permission edu.assessments.publish", "source": "openapi" },
+      { "code": "edu.scores.read", "description": "Permission edu.scores.read", "source": "openapi" },
+      { "code": "edu.scores.write", "description": "Permission edu.scores.write", "source": "openapi" },
+      { "code": "edu.scores.publish", "description": "Permission edu.scores.publish", "source": "openapi" },
+      { "code": "edu.assignments.read", "description": "Permission edu.assignments.read", "source": "openapi" },
+      { "code": "edu.assignments.write", "description": "Permission edu.assignments.write", "source": "openapi" },
+      { "code": "edu.assignments.grade", "description": "Permission edu.assignments.grade", "source": "openapi" },
+      { "code": "edu.submissions.read", "description": "Permission edu.submissions.read", "source": "openapi" },
+      { "code": "edu.submissions.review", "description": "Permission edu.submissions.review", "source": "openapi" },
+      { "code": "edu.materials.read", "description": "Permission edu.materials.read", "source": "openapi" },
+      { "code": "edu.materials.write", "description": "Permission edu.materials.write", "source": "openapi" },
+      { "code": "edu.reports.read", "description": "Permission edu.reports.read", "source": "openapi" },
+      { "code": "edu.reports.export", "description": "Permission edu.reports.export", "source": "openapi" },
+      { "code": "edu.audit_logs.read", "description": "Permission edu.audit_logs.read", "source": "openapi" }
+    ],
+    "openapiAuthorities": [
+      "sdkwork-edu-app-api",
+      "sdkwork-edu-backend-api"
+    ]
+  },
+  "roles": {
+    "domainStandardRoles": []
+  },
+  "dependencies": {
+    "requiresModules": []
+  }
+}

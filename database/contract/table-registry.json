@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.database.table-registry",
+  "tables": [
+    {
+      "table_name": "edu_term",
+      "owner": "edu-platform",
+      "compliance_level": "L2",
+      "lifecycle_status": "active"
+    },
+    {
+      "table_name": "edu_class",
+      "owner": "edu-platform",
+      "compliance_level": "L2",
+      "lifecycle_status": "active"
+    },
+    {
+      "table_name": "edu_class_member",
+      "owner": "edu-platform",
+      "compliance_level": "L2",
+      "lifecycle_status": "active"
+    },
+    {
+      "table_name": "edu_student",
+      "owner": "edu-platform",
+      "compliance_level": "L2",
+      "lifecycle_status": "active"
+    },
+    {
+      "table_name": "edu_teacher",
+      "owner": "edu-platform",
+      "compliance_level": "L2",
+      "lifecycle_status": "active"
+    },
+    {
+      "table_name": "edu_enrollment",
+      "owner": "edu-platform",
+      "compliance_level": "L2",
+      "lifecycle_status": "active"
+    },
+    {
+      "table_name": "edu_schedule",
+      "owner": "edu-platform",
+      "compliance_level": "L2",
+      "lifecycle_status": "active"
+    },
+    {
+      "table_name": "edu_attendance",
+      "owner": "edu-platform",
+      "compliance_level": "L2",
+      "lifecycle_status": "active"
+    },
+    {
+      "table_name": "edu_leave_request",
+      "owner": "edu-platform",
+      "compliance_level": "L2",
+      "lifecycle_status": "active"
+    },
+    {
+      "table_name": "edu_assessment",
+      "owner": "edu-platform",
+      "compliance_level": "L2",
+      "lifecycle_status": "active"
+    },
+    {
+      "table_name": "edu_score",
+      "owner": "edu-platform",
+      "compliance_level": "L2",
+      "lifecycle_status": "active"
+    },
+    {
+      "table_name": "edu_assignment",
+      "owner": "edu-platform",
+      "compliance_level": "L2",
+      "lifecycle_status": "active"
+    },
+    {
+      "table_name": "edu_submission",
+      "owner": "edu-platform",
+      "compliance_level": "L2",
+      "lifecycle_status": "active"
+    },
+    {
+      "table_name": "edu_material",
+      "owner": "edu-platform",
+      "compliance_level": "L2",
+      "lifecycle_status": "active"
+    }
+  ]
+}

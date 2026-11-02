@@ -1,0 +1,311 @@
+version: 2
+defaultProfile: cloud.production
+profiles:
+  cloud.test:
+    deployment:
+      deploymentProfile: cloud
+      environment: test
+      deliveryKind: container-image
+      deploymentDriver: kubernetes
+      managementModel: sdkwork-managed
+      tenancyModel: single-tenant
+      isolationModel: dedicated
+      networkExposure: public
+      rolloutStrategy: rolling
+      availabilityMode: high-availability
+    install:
+      layout: binary-package
+    expose:
+      - domain: edu-test.sdkwork.com
+        tls: sdkwork.com
+        mode: api
+      - domain: edu-test.birdcoder.com
+        tls: birdcoder.com
+        mode: api
+      - domain: edu-test.dtupay.com
+        tls: dtupay.com
+        mode: api
+      - domain: edu-test.noaper.com
+        tls: noaper.com
+        mode: api
+      - domain: edu-test.sdkwork.cn
+        tls: sdkwork.cn
+        mode: api
+      - domain: edu-test.birdcoder.cn
+        tls: birdcoder.cn
+        mode: api
+      - domain: edu-test.dtupay.cn
+        tls: dtupay.cn
+        mode: api
+      - domain: edu-test.noaper.cn
+        tls: noaper.cn
+        mode: api
+      - domain: edu-test.skubc.com
+        tls: skubc.com
+        mode: api
+      - domain: edu-test.skubc.cn
+        tls: skubc.cn
+        mode: api
+      - domain: edu-test.zowalk.com
+        tls: zowalk.com
+        mode: api
+      - domain: edu-test.zowalk.cn
+        tls: zowalk.cn
+        mode: api
+      - domain: edu-test.offer86.com
+        tls: offer86.com
+        mode: api
+      - domain: edu-test.offer86.cn
+        tls: offer86.cn
+        mode: api
+      - domain: edu-test.86offer.com
+        tls: 86offer.com
+        mode: api
+      - domain: edu-test.86offer.cn
+        tls: 86offer.cn
+        mode: api
+    packages: []
+    overrides:
+      topology:
+        spec: specs/topology.spec.json
+        profile: cloud.test
+        env: etc/topology/cloud.test.env
+      kubernetes:
+        reference: deployments/kubernetes/
+  cloud.staging:
+    deployment:
+      deploymentProfile: cloud
+      environment: staging
+      deliveryKind: container-image
+      deploymentDriver: kubernetes
+      managementModel: sdkwork-managed
+      tenancyModel: single-tenant
+      isolationModel: dedicated
+      networkExposure: public
+      rolloutStrategy: rolling
+      availabilityMode: high-availability
+    install:
+      layout: binary-package
+    expose:
+      - domain: edu-staging.sdkwork.com
+        tls: sdkwork.com
+        mode: api
+      - domain: edu-staging.birdcoder.com
+        tls: birdcoder.com
+        mode: api
+      - domain: edu-staging.dtupay.com
+        tls: dtupay.com
+        mode: api
+      - domain: edu-staging.noaper.com
+        tls: noaper.com
+        mode: api
+      - domain: edu-staging.sdkwork.cn
+        tls: sdkwork.cn
+        mode: api
+      - domain: edu-staging.birdcoder.cn
+        tls: birdcoder.cn
+        mode: api
+      - domain: edu-staging.dtupay.cn
+        tls: dtupay.cn
+        mode: api
+      - domain: edu-staging.noaper.cn
+        tls: noaper.cn
+        mode: api
+      - domain: edu-staging.skubc.com
+        tls: skubc.com
+        mode: api
+      - domain: edu-staging.skubc.cn
+        tls: skubc.cn
+        mode: api
+      - domain: edu-staging.zowalk.com
+        tls: zowalk.com
+        mode: api
+      - domain: edu-staging.zowalk.cn
+        tls: zowalk.cn
+        mode: api
+      - domain: edu-staging.offer86.com
+        tls: offer86.com
+        mode: api
+      - domain: edu-staging.offer86.cn
+        tls: offer86.cn
+        mode: api
+      - domain: edu-staging.86offer.com
+        tls: 86offer.com
+        mode: api
+      - domain: edu-staging.86offer.cn
+        tls: 86offer.cn
+        mode: api
+    packages: []
+    overrides:
+      topology:
+        spec: specs/topology.spec.json
+        profile: cloud.staging
+        env: etc/topology/cloud.staging.env
+      kubernetes:
+        reference: deployments/kubernetes/
+  cloud.production:
+    deployment:
+      deploymentProfile: cloud
+      environment: production
+      deliveryKind: container-image
+      deploymentDriver: kubernetes
+      managementModel: sdkwork-managed
+      tenancyModel: single-tenant
+      isolationModel: dedicated
+      networkExposure: public
+      rolloutStrategy: rolling
+      availabilityMode: high-availability
+    install:
+      layout: binary-package
+    expose:
+      - domain: edu.sdkwork.com
+        tls: sdkwork.com
+        mode: api
+      - domain: edu.birdcoder.com
+        tls: birdcoder.com
+        mode: api
+      - domain: edu.dtupay.com
+        tls: dtupay.com
+        mode: api
+      - domain: edu.noaper.com
+        tls: noaper.com
+        mode: api
+      - domain: edu.sdkwork.cn
+        tls: sdkwork.cn
+        mode: api
+      - domain: edu.birdcoder.cn
+        tls: birdcoder.cn
+        mode: api
+      - domain: edu.dtupay.cn
+        tls: dtupay.cn
+        mode: api
+      - domain: edu.noaper.cn
+        tls: noaper.cn
+        mode: api
+      - domain: edu.skubc.com
+        tls: skubc.com
+        mode: api
+      - domain: edu.skubc.cn
+        tls: skubc.cn
+        mode: api
+      - domain: edu.zowalk.com
+        tls: zowalk.com
+        mode: api
+      - domain: edu.zowalk.cn
+        tls: zowalk.cn
+        mode: api
+      - domain: edu.offer86.com
+        tls: offer86.com
+        mode: api
+      - domain: edu.offer86.cn
+        tls: offer86.cn
+        mode: api
+      - domain: edu.86offer.com
+        tls: 86offer.com
+        mode: api
+      - domain: edu.86offer.cn
+        tls: 86offer.cn
+        mode: api
+    packages: []
+    overrides:
+      topology:
+        spec: specs/topology.spec.json
+        profile: cloud.production
+        env: etc/topology/cloud.production.env
+      kubernetes:
+        reference: deployments/kubernetes/
+      proxy:
+        upstreams:
+          application.public-ingress: http://127.0.0.1:3910
+          platform.api-gateway: http://127.0.0.1:3910
+  standalone.production:
+    deployment:
+      deploymentProfile: standalone
+      environment: production
+      deliveryKind: host-package
+      deploymentDriver: nginx
+      managementModel: customer-managed
+      tenancyModel: single-tenant
+      isolationModel: dedicated
+      networkExposure: private
+      rolloutStrategy: recreate
+      availabilityMode: single-instance
+    install:
+      layout: binary-package
+    expose:
+      - domain: edu.sdkwork.com
+        tls: sdkwork.com
+        mode: api
+        apiPathStyle: full-prefix
+      - domain: edu.birdcoder.com
+        tls: birdcoder.com
+        mode: api
+        apiPathStyle: full-prefix
+      - domain: edu.dtupay.com
+        tls: dtupay.com
+        mode: api
+        apiPathStyle: full-prefix
+      - domain: edu.noaper.com
+        tls: noaper.com
+        mode: api
+        apiPathStyle: full-prefix
+      - domain: edu.sdkwork.cn
+        tls: sdkwork.cn
+        mode: api
+        apiPathStyle: full-prefix
+      - domain: edu.birdcoder.cn
+        tls: birdcoder.cn
+        mode: api
+        apiPathStyle: full-prefix
+      - domain: edu.dtupay.cn
+        tls: dtupay.cn
+        mode: api
+        apiPathStyle: full-prefix
+      - domain: edu.noaper.cn
+        tls: noaper.cn
+        mode: api
+        apiPathStyle: full-prefix
+      - domain: edu.skubc.com
+        tls: skubc.com
+        mode: api
+        apiPathStyle: full-prefix
+      - domain: edu.skubc.cn
+        tls: skubc.cn
+        mode: api
+        apiPathStyle: full-prefix
+      - domain: edu.zowalk.com
+        tls: zowalk.com
+        mode: api
+        apiPathStyle: full-prefix
+      - domain: edu.zowalk.cn
+        tls: zowalk.cn
+        mode: api
+        apiPathStyle: full-prefix
+      - domain: edu.offer86.com
+        tls: offer86.com
+        mode: api
+        apiPathStyle: full-prefix
+      - domain: edu.offer86.cn
+        tls: offer86.cn
+        mode: api
+        apiPathStyle: full-prefix
+      - domain: edu.86offer.com
+        tls: 86offer.com
+        mode: api
+        apiPathStyle: full-prefix
+      - domain: edu.86offer.cn
+        tls: 86offer.cn
+        mode: api
+        apiPathStyle: full-prefix
+    packages: []
+    overrides:
+      topology:
+        spec: specs/topology.spec.json
+        profile: standalone.production
+        env: etc/topology/standalone.production.env
+      proxy:
+        upstreams:
+          application.public-ingress: http://127.0.0.1:3910
+          platform.api-gateway: http://127.0.0.1:3910
+      nginx:
+        clientMaxBodySize: 32m

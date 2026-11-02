@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.process-database-pool",
+  "profile": {
+    "exampleFile": "config/host/postgres.env.example",
+    "database": "sdkwork_ai_dev",
+    "schema": "sdkwork_ai_dev"
+  },
+  "processes": [
+    {
+      "id": "sdkwork-api-edu-standalone-gateway",
+      "entrypoint": "crates/sdkwork-api-edu-standalone-gateway/src/main.rs",
+      "poolOwner": "crates/sdkwork-edu-database-host/src/lib.rs",
+      "driver": "sqlx::PgPool",
+      "poolCount": 1,
+      "databaseUrlEnv": "SDKWORK_DATABASE_URL",
+      "schemaEnv": "SDKWORK_DATABASE_SCHEMA",
+      "maxConnectionsEnv": "SDKWORK_DATABASE_MAX_CONNECTIONS",
+      "productionSourceRoots": [
+        "crates/sdkwork-api-edu-standalone-gateway/src",
+        "crates/sdkwork-api-edu-assembly/src",
+        "crates/sdkwork-edu-database-host/src",
+        "crates/sdkwork-content-edu-repository-sqlx/src"
+      ],
+      "consumers": [
+        {
+          "module": "sdkwork-edu database lifecycle",
+          "poolMode": "installed-process-pool",
+          "evidence": [
+            "crates/sdkwork-edu-database-host/src/lib.rs"
+          ]
+        },
+        {
+          "module": "sdkwork-edu api assembly",
+          "poolMode": "installed-process-pool",
+          "evidence": [
+            "crates/sdkwork-api-edu-assembly/src/lib.rs"
+          ]
+        }
+      ],
+      "temporaryDriverExceptions": []
+    }
+  ],
+  "verification": [
+    "node ../sdkwork-specs/tools/check-process-shared-database-pool.mjs --root ."
+  ]
+}

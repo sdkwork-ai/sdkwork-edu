@@ -1,0 +1,6 @@
+local/
+secrets/
+cache/
+tmp/
+manual-backups/
+sdkwork-generator-*.json

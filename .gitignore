@@ -1,0 +1,108 @@
+target/
+node_modules/
+dist/
+build/
+coverage/
+*.log
+*.tgz
+.DS_Store
+Thumbs.db
+
+# SDKWork local environment and runtime config overrides
+config/host/postgres.env
+config/*.local.toml
+
+# SDKWork local runtime state
+.runtime/
+**/.runtime/
+**/node_modules/
+/target/
+**/target/
+.env
+.env.*
+!.env.example
+!.env.*.example
+!config/host/postgres.env.example
+**/dist/
+**/.pnpm-store/
+.idea/
+.vscode/
+**/.sdkwork/local/
+**/.sdkwork/secrets/
+**/.sdkwork/cache/
+**/.sdkwork/tmp/
+**/.sdkwork/manual-backups/
+**/.sdkwork/sdkwork-generator-changes.json
+**/.sdkwork/sdkwork-generator-manifest.json
+**/.sdkwork/sdkwork-generator-report.json
+
+# Generated SDK compiled outputs (only .ts sources are tracked)
+**/generated/**/*.js
+**/generated/**/*.d.ts
+**/generated/**/*.js.map
+**/generated/**/*.d.ts.map
+
+# TypeScript build outputs at SDK package src roots
+**/src/index.js
+**/src/index.d.ts
+**/src/index.js.map
+**/src/index.d.ts.map
+
+# TypeScript compiled outputs in src directories
+**/src/**/*.js.map
+**/src/**/*.d.ts.map
+
+# Runtime-generated env config (modified by local dev server)
+**/public/runtime-env.json
+
+# Build artifacts
+.pnpm-store/
+.turbo/
+**/.turbo/
+*.sqlite-shm
+*.sqlite-wal
+**/test-results/
+*.tsbuildinfo
+**/.cache/
+**/build/
+**/*.bootstrap.local.json
+etc/**/*.local.*
+/etc/secrets/
+
+# Compiler emit is ignored only where the file is emit BY DEFINITION. The broad
+# `**/src/**/*.js` / `**/src/**/*.d.ts` globs are forbidden: `.gitignore` cannot
+# express "ignore this only when a same-stem .ts sibling exists", so they also hide
+# authored declarations. The sibling rule is enforced against tracked files by
+# `sdkwork-specs/tools/check-repository-baseline-content.mjs` instead.
+
+# Local backup copy of a previously generated SDK tree (superseded by the
+# tracked `server-openapi` directory); never commit.
+**/server-openapi-old/
+
+# Scratch probe scripts and one-off fixup helpers (never commit).
+/scripts/tmp-*
+
+# ---- auto-audited: local artifacts that must never be committed ----
+*.key
+*.pem
+*.p12
+*.pfx
+*.keystore
+tmp/
+temp/
+*.tmp
+*.temp
+.next/
+
+# Per-environment SDKWork materializations are tracked (ENVIRONMENT_SPEC 5.1.7).
+# Local values (`.env`, `.env.local`, `*.bootstrap.local`) stay ignored above.
+!.env.standalone.development
+!.env.standalone.test
+!.env.standalone.staging
+!.env.standalone.demo
+!.env.standalone.production
+!.env.cloud.development
+!.env.cloud.test
+!.env.cloud.staging
+!.env.cloud.demo
+!.env.cloud.production

@@ -1,0 +1,16 @@
+[package]
+name = "sdkwork-edu-embedded-bootstrap"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "SDKWork Edu in-process assembly and platform port adapters"
+
+[lib]
+name = "sdkwork_edu_embedded_bootstrap"
+
+[lints]
+workspace = true
+
+[dependencies]
+sdkwork-iam-embedded-application-bootstrap = { workspace = true }

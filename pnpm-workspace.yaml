@@ -1,0 +1,46 @@
+packages:
+  - "apps/sdkwork-edu-pc"
+  - "apps/sdkwork-edu-pc/packages/*"
+  - "apps/sdkwork-edu-h5"
+  - "apps/sdkwork-edu-h5/packages/*"
+  - "apps/sdkwork-edu-common/packages/*"
+  - "sdks/_shared/*"
+  - "sdks/sdkwork-edu-app-sdk/sdkwork-edu-app-sdk-typescript"
+  - "sdks/sdkwork-edu-backend-sdk/sdkwork-edu-backend-sdk-typescript"
+  - "../sdkwork-app-topology"
+  - "../sdkwork-utils/packages/sdkwork-utils-typescript"
+  - "../sdkwork-sdk-commons/sdkwork-sdk-common-typescript"
+  - "../sdkwork-drive/sdks/sdkwork-drive-app-sdk/sdkwork-drive-app-sdk-typescript"
+
+onlyBuiltDependencies:
+  - esbuild
+
+catalog:
+  "@types/node": ^25.9.2
+  "@vitejs/plugin-react": ^6.0.5
+  "@tailwindcss/vite": ^4.3.3
+  react: ^19.2.8
+  react-dom: ^19.2.8
+  react-router: ^7.18.2
+  react-router-dom: ^7.18.2
+  typescript: ^6.0.2
+  vite: ^8.0.3
+  tailwindcss: ^4.3.3
+  "@tailwindcss/typography": ^0.5.19
+  "@tanstack/react-query": ^5.96.2
+  zustand: ^5.0.12
+  clsx: ^2.1.1
+  tailwind-merge: ^3.6.0
+  lucide-react: ^1.31.0
+  i18next: ^26.3.6
+  react-i18next: ^17.0.11
+  vitest: ^4.1.10
+  jsdom: 29.1.1
+  "@testing-library/react": 16.3.2
+  "@testing-library/dom": 10.4.1
+  "@testing-library/jest-dom": ^7.0.1
+  "@playwright/test": ^1.52.0
+  "@types/react": ^19.2.14
+  "@types/react-dom": ^19.2.3
+  tsx: ^4.23.12
+  tsup: ^8.5.1

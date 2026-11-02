@@ -1,0 +1,186 @@
+{
+    "schemaVersion":  1,
+    "kind":  "sdkwork.edu.api.operations",
+    "surface":  "app-api",
+    "apiAuthority":  "sdkwork-edu-app-api",
+    "sdkFamily":  "sdkwork-edu-app-sdk",
+    "apiPrefix":  "/app/v3/api",
+    "domain":  "content",
+    "capability":  "edu",
+    "owner":  "sdkwork-edu",
+    "operations":  [
+                       {
+                           "method":  "GET",
+                           "path":  "/app/v3/api/my_classes",
+                           "operationId":  "myClasses.list",
+                           "resource":  "myClasses",
+                           "authMode":  "dual-token",
+                           "query":  [
+                                         "page",
+                                         "page_size",
+                                         "q"
+                                     ]
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/app/v3/api/my_classes/{my_classeId}",
+                           "operationId":  "myClasses.retrieve",
+                           "resource":  "myClasses",
+                           "authMode":  "dual-token"
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/app/v3/api/my_schedule",
+                           "operationId":  "mySchedule.list",
+                           "resource":  "mySchedule",
+                           "authMode":  "dual-token",
+                           "query":  [
+                                         "page",
+                                         "page_size",
+                                         "q"
+                                     ]
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/app/v3/api/attendance_records",
+                           "operationId":  "attendanceRecords.list",
+                           "resource":  "attendanceRecords",
+                           "authMode":  "dual-token",
+                           "query":  [
+                                         "page",
+                                         "page_size",
+                                         "q"
+                                     ]
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/app/v3/api/leave_requests",
+                           "operationId":  "leaveRequests.list",
+                           "resource":  "leaveRequests",
+                           "authMode":  "dual-token",
+                           "query":  [
+                                         "page",
+                                         "page_size",
+                                         "q"
+                                     ]
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/app/v3/api/leave_requests/{leave_requestId}",
+                           "operationId":  "leaveRequests.retrieve",
+                           "resource":  "leaveRequests",
+                           "authMode":  "dual-token"
+                       },
+                       {
+                           "method":  "POST",
+                           "path":  "/app/v3/api/leave_requests",
+                           "operationId":  "leaveRequests.create",
+                           "resource":  "leaveRequests",
+                           "authMode":  "dual-token"
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/app/v3/api/assignments",
+                           "operationId":  "assignments.list",
+                           "resource":  "assignments",
+                           "authMode":  "dual-token",
+                           "query":  [
+                                         "page",
+                                         "page_size",
+                                         "q"
+                                     ]
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/app/v3/api/assignments/{assignmentId}",
+                           "operationId":  "assignments.retrieve",
+                           "resource":  "assignments",
+                           "authMode":  "dual-token"
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/app/v3/api/submissions",
+                           "operationId":  "submissions.list",
+                           "resource":  "submissions",
+                           "authMode":  "dual-token",
+                           "query":  [
+                                         "page",
+                                         "page_size",
+                                         "q"
+                                     ]
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/app/v3/api/submissions/{submissionId}",
+                           "operationId":  "submissions.retrieve",
+                           "resource":  "submissions",
+                           "authMode":  "dual-token"
+                       },
+                       {
+                           "method":  "POST",
+                           "path":  "/app/v3/api/submissions",
+                           "operationId":  "submissions.create",
+                           "resource":  "submissions",
+                           "authMode":  "dual-token"
+                       },
+                       {
+                           "method":  "PATCH",
+                           "path":  "/app/v3/api/submissions/{submissionId}",
+                           "operationId":  "submissions.update",
+                           "resource":  "submissions",
+                           "authMode":  "dual-token"
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/app/v3/api/materials",
+                           "operationId":  "materials.list",
+                           "resource":  "materials",
+                           "authMode":  "dual-token",
+                           "query":  [
+                                         "page",
+                                         "page_size",
+                                         "q"
+                                     ]
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/app/v3/api/materials/{materialId}",
+                           "operationId":  "materials.retrieve",
+                           "resource":  "materials",
+                           "authMode":  "dual-token"
+                       },
+                       {
+                           "method":  "POST",
+                           "path":  "/app/v3/api/materials/{materialId}/download_grant",
+                           "operationId":  "materials.download_grant",
+                           "resource":  "materials",
+                           "authMode":  "dual-token"
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/app/v3/api/scores",
+                           "operationId":  "scores.list",
+                           "resource":  "scores",
+                           "authMode":  "dual-token",
+                           "query":  [
+                                         "page",
+                                         "page_size",
+                                         "q"
+                                     ]
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/app/v3/api/profiles/{profileId}",
+                           "operationId":  "profiles.retrieve",
+                           "resource":  "profiles",
+                           "authMode":  "dual-token"
+                       },
+                       {
+                           "method":  "PATCH",
+                           "path":  "/app/v3/api/profiles/{profileId}",
+                           "operationId":  "profiles.update",
+                           "resource":  "profiles",
+                           "authMode":  "dual-token"
+                       }
+                   ]
+}

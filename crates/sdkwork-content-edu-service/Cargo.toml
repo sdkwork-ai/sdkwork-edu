@@ -1,0 +1,15 @@
+[package]
+name = "sdkwork-content-edu-service"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "SDKWork Edu domain models, commands and application service ports"
+
+[lib]
+name = "sdkwork_content_edu_service"
+
+[lints]
+workspace = true
+
+[dependencies]

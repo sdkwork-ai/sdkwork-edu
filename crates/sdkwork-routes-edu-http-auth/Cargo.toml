@@ -1,0 +1,15 @@
+[package]
+name = "sdkwork-routes-edu-http-auth"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "SDKWork Edu dual-token HTTP request context, error mapping and response helpers"
+
+[lib]
+name = "sdkwork_routes_edu_http_auth"
+
+[lints]
+workspace = true
+
+[dependencies]

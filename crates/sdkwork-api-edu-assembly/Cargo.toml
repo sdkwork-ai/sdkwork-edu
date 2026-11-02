@@ -1,0 +1,15 @@
+[package]
+name = "sdkwork-api-edu-assembly"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "SDKWork Edu API assembly: route crate composition and hosted router"
+
+[lib]
+name = "sdkwork_api_edu_assembly"
+
+[lints]
+workspace = true
+
+[dependencies]

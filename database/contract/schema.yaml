@@ -1,0 +1,53 @@
+schema_version: 1
+kind: sdkwork.database.schema
+database_role: authoritative-server
+module_id: edu
+contract_version: 1.0.0
+owner_team: edu-platform
+compliance_level: L2
+engines:
+  - postgres
+table_prefix: edu_
+tables:
+  - name: edu_term
+    lifecycle_status: active
+    owner: edu-platform
+  - name: edu_class
+    lifecycle_status: active
+    owner: edu-platform
+  - name: edu_class_member
+    lifecycle_status: active
+    owner: edu-platform
+  - name: edu_student
+    lifecycle_status: active
+    owner: edu-platform
+  - name: edu_teacher
+    lifecycle_status: active
+    owner: edu-platform
+  - name: edu_enrollment
+    lifecycle_status: active
+    owner: edu-platform
+  - name: edu_schedule
+    lifecycle_status: active
+    owner: edu-platform
+  - name: edu_attendance
+    lifecycle_status: active
+    owner: edu-platform
+  - name: edu_leave_request
+    lifecycle_status: active
+    owner: edu-platform
+  - name: edu_assessment
+    lifecycle_status: active
+    owner: edu-platform
+  - name: edu_score
+    lifecycle_status: active
+    owner: edu-platform
+  - name: edu_assignment
+    lifecycle_status: active
+    owner: edu-platform
+  - name: edu_submission
+    lifecycle_status: active
+    owner: edu-platform
+  - name: edu_material
+    lifecycle_status: active
+    owner: edu-platform

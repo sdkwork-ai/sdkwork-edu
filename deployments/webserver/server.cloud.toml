@@ -1,0 +1,12 @@
+profile = "cloud"
+
+# Cloud deployments terminate the platform gateway upstream of this webserver and
+# proxy only to the application ingress service inside the deployment namespace.
+[http]
+
+[[http.upstream]]
+name = "gateway"
+
+[[http.upstream.target]]
+address = "app:3910"
+weight = 1

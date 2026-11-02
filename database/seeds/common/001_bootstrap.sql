@@ -1,0 +1,5 @@
+-- SDKWork Edu bootstrap reference data.
+--
+-- Intentionally empty: this file exists so the `standard` seed profile has a stable,
+-- ordered entry point. Add reference rows here (with ON CONFLICT DO NOTHING) as
+-- capabilities land; keep the file idempotent.

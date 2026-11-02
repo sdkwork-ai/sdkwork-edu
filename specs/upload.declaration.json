@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "appId": "sdkwork-edu",
+  "declarations": [
+    {
+      "appResourceType": "edu.material",
+      "appResourceIdKind": "entity",
+      "scene": "material",
+      "source": "edu-material",
+      "uploadProfileCode": "document",
+      "retention": "long_term",
+      "purpose": "Teaching material attachment"
+    },
+    {
+      "appResourceType": "edu.submission",
+      "appResourceIdKind": "entity",
+      "scene": "homework",
+      "source": "edu-assignment",
+      "uploadProfileCode": "attachment",
+      "retention": "long_term",
+      "purpose": "Assignment submission attachment"
+    },
+    {
+      "appResourceType": "edu.avatar",
+      "appResourceIdKind": "entity",
+      "scene": "avatar",
+      "source": "edu-profile",
+      "uploadProfileCode": "avatar",
+      "retention": "long_term",
+      "purpose": "Student and teacher avatar"
+    },
+    {
+      "appResourceType": "edu.cover",
+      "appResourceIdKind": "entity",
+      "scene": "cover",
+      "source": "edu-class",
+      "uploadProfileCode": "image",
+      "retention": "long_term",
+      "purpose": "Class cover image"
+    },
+    {
+      "appResourceType": "edu.evidence",
+      "appResourceIdKind": "draft",
+      "scene": "leave-proof",
+      "source": "edu-attendance",
+      "uploadProfileCode": "image",
+      "retention": "temporary",
+      "retentionTtlSeconds": 7776000,
+      "purpose": "Leave request evidence"
+    }
+  ]
+}

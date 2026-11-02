@@ -1,0 +1,610 @@
+{
+    "schemaVersion":  1,
+    "kind":  "sdkwork.edu.api.operations",
+    "surface":  "backend-api",
+    "apiAuthority":  "sdkwork-edu-backend-api",
+    "sdkFamily":  "sdkwork-edu-backend-sdk",
+    "apiPrefix":  "/backend/v3/api",
+    "domain":  "content",
+    "capability":  "edu",
+    "owner":  "sdkwork-edu",
+    "operations":  [
+                       {
+                           "method":  "GET",
+                           "path":  "/backend/v3/api/terms",
+                           "operationId":  "terms.list",
+                           "resource":  "terms",
+                           "authMode":  "dual-token",
+                           "query":  [
+                                         "page",
+                                         "page_size",
+                                         "q"
+                                     ],
+                           "permission":  "edu.terms.read",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/backend/v3/api/terms/{termId}",
+                           "operationId":  "terms.retrieve",
+                           "resource":  "terms",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.terms.read",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "POST",
+                           "path":  "/backend/v3/api/terms",
+                           "operationId":  "terms.create",
+                           "resource":  "terms",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.terms.create",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "PATCH",
+                           "path":  "/backend/v3/api/terms/{termId}",
+                           "operationId":  "terms.update",
+                           "resource":  "terms",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.terms.update",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "DELETE",
+                           "path":  "/backend/v3/api/terms/{termId}",
+                           "operationId":  "terms.delete",
+                           "resource":  "terms",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.terms.write",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/backend/v3/api/classes",
+                           "operationId":  "classes.list",
+                           "resource":  "classes",
+                           "authMode":  "dual-token",
+                           "query":  [
+                                         "page",
+                                         "page_size",
+                                         "q"
+                                     ],
+                           "permission":  "edu.classes.read",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/backend/v3/api/classes/{classeId}",
+                           "operationId":  "classes.retrieve",
+                           "resource":  "classes",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.classes.read",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "POST",
+                           "path":  "/backend/v3/api/classes",
+                           "operationId":  "classes.create",
+                           "resource":  "classes",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.classes.create",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "PATCH",
+                           "path":  "/backend/v3/api/classes/{classeId}",
+                           "operationId":  "classes.update",
+                           "resource":  "classes",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.classes.update",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "POST",
+                           "path":  "/backend/v3/api/classes/{classeId}/archive",
+                           "operationId":  "classes.archive",
+                           "resource":  "classes",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.classes.archive",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/backend/v3/api/class_members",
+                           "operationId":  "classMembers.list",
+                           "resource":  "classMembers",
+                           "authMode":  "dual-token",
+                           "query":  [
+                                         "page",
+                                         "page_size",
+                                         "q"
+                                     ],
+                           "permission":  "edu.class_members.read",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "POST",
+                           "path":  "/backend/v3/api/class_members",
+                           "operationId":  "classMembers.create",
+                           "resource":  "classMembers",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.class_members.create",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "DELETE",
+                           "path":  "/backend/v3/api/class_members/{class_memberId}",
+                           "operationId":  "classMembers.delete",
+                           "resource":  "classMembers",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.class_members.write",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/backend/v3/api/students",
+                           "operationId":  "students.list",
+                           "resource":  "students",
+                           "authMode":  "dual-token",
+                           "query":  [
+                                         "page",
+                                         "page_size",
+                                         "q"
+                                     ],
+                           "permission":  "edu.students.read",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/backend/v3/api/students/{studentId}",
+                           "operationId":  "students.retrieve",
+                           "resource":  "students",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.students.read",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "POST",
+                           "path":  "/backend/v3/api/students",
+                           "operationId":  "students.create",
+                           "resource":  "students",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.students.create",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "PATCH",
+                           "path":  "/backend/v3/api/students/{studentId}",
+                           "operationId":  "students.update",
+                           "resource":  "students",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.students.update",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/backend/v3/api/teachers",
+                           "operationId":  "teachers.list",
+                           "resource":  "teachers",
+                           "authMode":  "dual-token",
+                           "query":  [
+                                         "page",
+                                         "page_size",
+                                         "q"
+                                     ],
+                           "permission":  "edu.teachers.read",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/backend/v3/api/teachers/{teacherId}",
+                           "operationId":  "teachers.retrieve",
+                           "resource":  "teachers",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.teachers.read",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "POST",
+                           "path":  "/backend/v3/api/teachers",
+                           "operationId":  "teachers.create",
+                           "resource":  "teachers",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.teachers.create",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "PATCH",
+                           "path":  "/backend/v3/api/teachers/{teacherId}",
+                           "operationId":  "teachers.update",
+                           "resource":  "teachers",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.teachers.update",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/backend/v3/api/guardians",
+                           "operationId":  "guardians.list",
+                           "resource":  "guardians",
+                           "authMode":  "dual-token",
+                           "query":  [
+                                         "page",
+                                         "page_size",
+                                         "q"
+                                     ],
+                           "permission":  "edu.guardians.read",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "POST",
+                           "path":  "/backend/v3/api/guardians",
+                           "operationId":  "guardians.create",
+                           "resource":  "guardians",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.guardians.create",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "PATCH",
+                           "path":  "/backend/v3/api/guardians/{guardianId}",
+                           "operationId":  "guardians.update",
+                           "resource":  "guardians",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.guardians.update",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/backend/v3/api/enrollments",
+                           "operationId":  "enrollments.list",
+                           "resource":  "enrollments",
+                           "authMode":  "dual-token",
+                           "query":  [
+                                         "page",
+                                         "page_size",
+                                         "q"
+                                     ],
+                           "permission":  "edu.enrollments.read",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/backend/v3/api/enrollments/{enrollmentId}",
+                           "operationId":  "enrollments.retrieve",
+                           "resource":  "enrollments",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.enrollments.read",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "POST",
+                           "path":  "/backend/v3/api/enrollments",
+                           "operationId":  "enrollments.create",
+                           "resource":  "enrollments",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.enrollments.create",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "POST",
+                           "path":  "/backend/v3/api/enrollments/{enrollmentId}/review",
+                           "operationId":  "enrollments.review",
+                           "resource":  "enrollments",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.enrollments.review",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/backend/v3/api/schedules",
+                           "operationId":  "schedules.list",
+                           "resource":  "schedules",
+                           "authMode":  "dual-token",
+                           "query":  [
+                                         "page",
+                                         "page_size",
+                                         "q"
+                                     ],
+                           "permission":  "edu.schedules.read",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "POST",
+                           "path":  "/backend/v3/api/schedules",
+                           "operationId":  "schedules.create",
+                           "resource":  "schedules",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.schedules.create",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "PATCH",
+                           "path":  "/backend/v3/api/schedules/{scheduleId}",
+                           "operationId":  "schedules.update",
+                           "resource":  "schedules",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.schedules.update",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "DELETE",
+                           "path":  "/backend/v3/api/schedules/{scheduleId}",
+                           "operationId":  "schedules.delete",
+                           "resource":  "schedules",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.schedules.write",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/backend/v3/api/attendance_records",
+                           "operationId":  "attendanceRecords.list",
+                           "resource":  "attendanceRecords",
+                           "authMode":  "dual-token",
+                           "query":  [
+                                         "page",
+                                         "page_size",
+                                         "q"
+                                     ],
+                           "permission":  "edu.attendance_records.read",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "POST",
+                           "path":  "/backend/v3/api/attendance_records",
+                           "operationId":  "attendanceRecords.create",
+                           "resource":  "attendanceRecords",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.attendance_records.create",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "PATCH",
+                           "path":  "/backend/v3/api/attendance_records/{attendance_recordId}",
+                           "operationId":  "attendanceRecords.update",
+                           "resource":  "attendanceRecords",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.attendance_records.update",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/backend/v3/api/leave_requests",
+                           "operationId":  "leaveRequests.list",
+                           "resource":  "leaveRequests",
+                           "authMode":  "dual-token",
+                           "query":  [
+                                         "page",
+                                         "page_size",
+                                         "q"
+                                     ],
+                           "permission":  "edu.leave_requests.read",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/backend/v3/api/leave_requests/{leave_requestId}",
+                           "operationId":  "leaveRequests.retrieve",
+                           "resource":  "leaveRequests",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.leave_requests.read",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "POST",
+                           "path":  "/backend/v3/api/leave_requests/{leave_requestId}/review",
+                           "operationId":  "leaveRequests.review",
+                           "resource":  "leaveRequests",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.leave_requests.review",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/backend/v3/api/assessments",
+                           "operationId":  "assessments.list",
+                           "resource":  "assessments",
+                           "authMode":  "dual-token",
+                           "query":  [
+                                         "page",
+                                         "page_size",
+                                         "q"
+                                     ],
+                           "permission":  "edu.assessments.read",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/backend/v3/api/assessments/{assessmentId}",
+                           "operationId":  "assessments.retrieve",
+                           "resource":  "assessments",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.assessments.read",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "POST",
+                           "path":  "/backend/v3/api/assessments",
+                           "operationId":  "assessments.create",
+                           "resource":  "assessments",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.assessments.create",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "PATCH",
+                           "path":  "/backend/v3/api/assessments/{assessmentId}",
+                           "operationId":  "assessments.update",
+                           "resource":  "assessments",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.assessments.update",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "POST",
+                           "path":  "/backend/v3/api/assessments/{assessmentId}/publish",
+                           "operationId":  "assessments.publish",
+                           "resource":  "assessments",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.assessments.publish",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/backend/v3/api/scores",
+                           "operationId":  "scores.list",
+                           "resource":  "scores",
+                           "authMode":  "dual-token",
+                           "query":  [
+                                         "page",
+                                         "page_size",
+                                         "q"
+                                     ],
+                           "permission":  "edu.scores.read",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "POST",
+                           "path":  "/backend/v3/api/scores",
+                           "operationId":  "scores.create",
+                           "resource":  "scores",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.scores.create",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "PATCH",
+                           "path":  "/backend/v3/api/scores/{scoreId}",
+                           "operationId":  "scores.update",
+                           "resource":  "scores",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.scores.update",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "POST",
+                           "path":  "/backend/v3/api/scores/{scoreId}/publish",
+                           "operationId":  "scores.publish",
+                           "resource":  "scores",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.scores.publish",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/backend/v3/api/assignments",
+                           "operationId":  "assignments.list",
+                           "resource":  "assignments",
+                           "authMode":  "dual-token",
+                           "query":  [
+                                         "page",
+                                         "page_size",
+                                         "q"
+                                     ],
+                           "permission":  "edu.assignments.read",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/backend/v3/api/assignments/{assignmentId}",
+                           "operationId":  "assignments.retrieve",
+                           "resource":  "assignments",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.assignments.read",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "POST",
+                           "path":  "/backend/v3/api/assignments",
+                           "operationId":  "assignments.create",
+                           "resource":  "assignments",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.assignments.create",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "PATCH",
+                           "path":  "/backend/v3/api/assignments/{assignmentId}",
+                           "operationId":  "assignments.update",
+                           "resource":  "assignments",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.assignments.update",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/backend/v3/api/submissions",
+                           "operationId":  "submissions.list",
+                           "resource":  "submissions",
+                           "authMode":  "dual-token",
+                           "query":  [
+                                         "page",
+                                         "page_size",
+                                         "q"
+                                     ],
+                           "permission":  "edu.submissions.read",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/backend/v3/api/submissions/{submissionId}",
+                           "operationId":  "submissions.retrieve",
+                           "resource":  "submissions",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.submissions.read",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "POST",
+                           "path":  "/backend/v3/api/submissions/{submissionId}/grade",
+                           "operationId":  "submissions.grade",
+                           "resource":  "submissions",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.submissions.grade",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "GET",
+                           "path":  "/backend/v3/api/materials",
+                           "operationId":  "materials.list",
+                           "resource":  "materials",
+                           "authMode":  "dual-token",
+                           "query":  [
+                                         "page",
+                                         "page_size",
+                                         "q"
+                                     ],
+                           "permission":  "edu.materials.read",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "POST",
+                           "path":  "/backend/v3/api/materials",
+                           "operationId":  "materials.create",
+                           "resource":  "materials",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.materials.create",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "DELETE",
+                           "path":  "/backend/v3/api/materials/{materialId}",
+                           "operationId":  "materials.delete",
+                           "resource":  "materials",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.materials.write",
+                           "authTier":  "3"
+                       },
+                       {
+                           "method":  "POST",
+                           "path":  "/backend/v3/api/reports/{reportId}/export",
+                           "operationId":  "reports.export",
+                           "resource":  "reports",
+                           "authMode":  "dual-token",
+                           "permission":  "edu.reports.export",
+                           "authTier":  "3"
+                       }
+                   ]
+}

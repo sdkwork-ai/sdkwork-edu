@@ -1,0 +1,15 @@
+[package]
+name = "sdkwork-edu-database-host"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "SDKWork Edu database lifecycle host over the sdkwork-database framework"
+
+[lib]
+name = "sdkwork_edu_database_host"
+
+[lints]
+workspace = true
+
+[dependencies]

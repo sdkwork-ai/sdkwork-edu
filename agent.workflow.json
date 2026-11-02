@@ -1,0 +1,92 @@
+{
+  "$schema": "../sdkwork-github-workflow/schemas/agent-workflow.schema.json",
+  "schemaVersion": "2026-06-06.agent.workflow.v1",
+  "app": {
+    "id": "sdkwork-edu",
+    "name": "sdkwork-edu",
+    "repository": "sdkwork-ai/sdkwork-edu",
+    "sourcePath": ".",
+    "configPath": "agent.app.config.json"
+  },
+  "release": {
+    "artifactPrefix": "sdkwork-edu",
+    "defaultVersion": "0.1.0"
+  },
+  "dependencies": [
+    {
+      "id": "sdkwork-app-topology",
+      "repository": "sdkwork-ai/sdkwork-app-topology",
+      "refInput": "SDKWORK_APP_TOPOLOGY_REF",
+      "tokenSecret": "SDKWORK_RELEASE_TOKEN"
+    },
+    {
+      "id": "sdkwork-database",
+      "repository": "sdkwork-ai/sdkwork-database",
+      "refInput": "SDKWORK_DATABASE_REF",
+      "tokenSecret": "SDKWORK_RELEASE_TOKEN"
+    },
+    {
+      "id": "sdkwork-drive",
+      "repository": "sdkwork-ai/sdkwork-drive",
+      "refInput": "SDKWORK_DRIVE_REF",
+      "tokenSecret": "SDKWORK_RELEASE_TOKEN"
+    },
+    {
+      "id": "sdkwork-iam",
+      "repository": "sdkwork-ai/sdkwork-iam",
+      "refInput": "SDKWORK_IAM_REF",
+      "tokenSecret": "SDKWORK_RELEASE_TOKEN"
+    },
+    {
+      "id": "sdkwork-sdk-commons",
+      "repository": "sdkwork-ai/sdkwork-sdk-commons",
+      "refInput": "SDKWORK_SDK_COMMONS_REF",
+      "tokenSecret": "SDKWORK_RELEASE_TOKEN"
+    },
+    {
+      "id": "sdkwork-utils",
+      "repository": "sdkwork-ai/sdkwork-utils",
+      "refInput": "SDKWORK_UTILS_REF",
+      "tokenSecret": "SDKWORK_RELEASE_TOKEN"
+    },
+    {
+      "id": "sdkwork-web-framework",
+      "repository": "sdkwork-ai/sdkwork-web-framework",
+      "refInput": "SDKWORK_WEB_FRAMEWORK_REF",
+      "tokenSecret": "SDKWORK_RELEASE_TOKEN"
+    }
+  ],
+  "toolchains": {},
+  "lifecycle": {},
+  "targets": [
+    {
+      "id": "linux-x64-standalone-server-tar-gz",
+      "packageId": "linux-x64-standalone-server-tar-gz",
+      "profileBinding": "fixed",
+      "deploymentProfile": "standalone",
+      "runtimeTarget": "server",
+      "profile": "server",
+      "platform": "linux",
+      "architecture": "x64",
+      "formats": ["tar.gz"],
+      "runner": "ubuntu-24.04",
+      "outputGlobs": ["dist/server/*.tar.gz"]
+    },
+    {
+      "id": "linux-x64-cloud-server-tar-gz",
+      "packageId": "linux-x64-cloud-server-tar-gz",
+      "profileBinding": "fixed",
+      "deploymentProfile": "cloud",
+      "runtimeTarget": "server",
+      "profile": "server",
+      "platform": "linux",
+      "architecture": "x64",
+      "formats": ["tar.gz"],
+      "runner": "ubuntu-24.04",
+      "outputGlobs": ["dist/server/*.tar.gz"]
+    }
+  ],
+  "security": {},
+  "publish": {},
+  "deployments": []
+}
