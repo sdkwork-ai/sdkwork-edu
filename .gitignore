@@ -93,6 +93,13 @@ temp/
 *.tmp
 *.temp
 .next/
+.sdkwork/preview/
+**/.sdkwork/preview/
+__pycache__/
+**/__pycache__/
+*.pyc
+.workbuddy/
+**/.workbuddy/
 
 # Per-environment SDKWork materializations are tracked (ENVIRONMENT_SPEC 5.1.7).
 # Local values (`.env`, `.env.local`, `*.bootstrap.local`) stay ignored above.
