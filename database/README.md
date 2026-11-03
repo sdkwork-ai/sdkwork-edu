@@ -17,6 +17,18 @@ Authoritative database lifecycle assets (DATABASE_FRAMEWORK_SPEC.md section 5.1)
 
 Module: `edu` | prefix: `edu_` | service code: `EDU` | role: `authoritative-server`.
 
+## Initialization state
+
+The module uses `baselineStrategy: baseline-plus-migrations`:
+
+1. **Baseline** — `ddl/baseline/postgres/0001_edu_baseline.sql` is the authoritative
+   greenfield DDL snapshot.
+2. **Migrations** — `migrations/postgres/` carries ordered, idempotent post-baseline
+   changes for already-initialized databases. Applied migrations are never edited.
+3. **Contract** — `contract/schema.yaml`, `contract/prefix-registry.json`, and
+   `contract/table-registry.json` are the module inventory consumed by the lifecycle
+   and drift checks.
+
 ## Commands
 
 ```bash
