@@ -53,10 +53,14 @@
         "alphaChannel": false,
         "sortOrder": 0,
         "enabled": true,
-        "metadata": { "generatedPlaceholder": true }
+        "metadata": {
+          "generatedPlaceholder": true
+        }
       },
       "platform": [],
-      "metadata": { "generatedPlaceholder": true }
+      "metadata": {
+        "generatedPlaceholder": true
+      }
     },
     "screenshots": [
       {
@@ -76,7 +80,10 @@
         "caption": "SDKWork Edu product screenshot.",
         "sortOrder": 0,
         "enabled": true,
-        "metadata": { "generatedPlaceholder": true, "altText": "SDKWork Edu app screenshot." }
+        "metadata": {
+          "generatedPlaceholder": true,
+          "altText": "SDKWork Edu app screenshot."
+        }
       }
     ],
     "previews": [
@@ -95,7 +102,10 @@
         "caption": "SDKWork Edu preview.",
         "sortOrder": 0,
         "enabled": true,
-        "metadata": { "generatedPlaceholder": true, "altText": "SDKWork Edu preview cover." }
+        "metadata": {
+          "generatedPlaceholder": true,
+          "altText": "SDKWork Edu preview cover."
+        }
       }
     ],
     "metadata": {
@@ -105,10 +115,16 @@
   },
   "publish": {
     "status": "ACTIVE",
-    "platforms": ["WEB"],
-    "installPlatforms": ["WEB"],
+    "platforms": [
+      "WEB"
+    ],
+    "installPlatforms": [
+      "WEB"
+    ],
     "defaultPackageId": "linux-x64-standalone-server-tar-gz",
-    "installSkill": { "name": "sdkwork-skills-app" },
+    "installSkill": {
+      "name": "sdkwork-skills-app"
+    },
     "stores": [],
     "storeUrl": "https://sdkwork.com/apps/sdkwork-edu"
   },
@@ -133,7 +149,9 @@
           "runtimeTarget": "server",
           "profileBinding": "fixed",
           "enabled": true,
-          "metadata": { "releaseBuildDeferred": true }
+          "metadata": {
+            "releaseBuildDeferred": true
+          }
         },
         {
           "id": "linux-x64-cloud-server-tar-gz",
@@ -149,7 +167,9 @@
           "runtimeTarget": "server",
           "profileBinding": "fixed",
           "enabled": true,
-          "metadata": { "releaseBuildDeferred": true }
+          "metadata": {
+            "releaseBuildDeferred": true
+          }
         }
       ]
     }
@@ -157,7 +177,9 @@
   "release": {
     "currentVersion": "0.1.0",
     "defaultChannel": "STABLE",
-    "latest": { "STABLE": "0.1.0" },
+    "latest": {
+      "STABLE": "0.1.0"
+    },
     "notes": [
       {
         "version": "0.1.0",
@@ -189,6 +211,19 @@
   },
   "metadata": {
     "deploymentConfig": "etc/sdkwork.deployment.config.json",
-    "standardOwner": "sdkwork-platform"
+    "standardOwner": "sdkwork-platform",
+    "publishing": {
+      "appIdByTarget": {
+        "cloud.development": "f8e3452b-6265-4bc7-be65-559bfabffec8"
+      },
+      "birdcoder": {
+        "appId": "f8e3452b-6265-4bc7-be65-559bfabffec8",
+        "appName": "SDKWork Edu",
+        "appSlug": "sdkwork-edu",
+        "appKey": "sdkwork-edu",
+        "sourceDirectory": "D:\\sdkwork-space\\sdkwork-edu",
+        "updatedAt": "2026-11-13T14:57:49.159Z"
+      }
+    }
   }
 }
